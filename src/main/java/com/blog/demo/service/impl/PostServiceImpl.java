@@ -1,9 +1,10 @@
-package com.blog.demo.service;
+package com.blog.demo.service.impl;
 
 import com.blog.demo.entity.Post;
 import com.blog.demo.exception.ResourceNotFoundException;
 import com.blog.demo.payload.PostDto;
 import com.blog.demo.repository.PostRepository;
+import com.blog.demo.service.PostService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
