@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    container_name: postgres-db-blog
+    image: 'postgres:latest'
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: yo
+      POSTGRES_PASSWORD: yo
+      POSTGRES_DB: yo
+    volumes:
+      - .dbdata:/var/lib/postgres
+    expose:
+      - 5432
