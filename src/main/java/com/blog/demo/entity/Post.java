@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
@@ -26,5 +27,23 @@ public class Post {
 
     @Column(name = "content", nullable = false)
     private String content;
+    @Column
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdAt;
+
+    @Column
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updatedAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = new Date();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = new Date();
+    }
+
 
 }
