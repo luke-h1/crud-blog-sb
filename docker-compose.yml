@@ -9,7 +9,7 @@ services:
     environment:
       POSTGRES_USER: yo
       POSTGRES_PASSWORD: yo
-      POSTGRES_DB: yo
+      POSTGRES_DB: blog-test
     volumes:
       - .dbdata:/var/lib/postgres
     expose:
